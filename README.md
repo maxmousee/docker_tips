@@ -95,3 +95,21 @@ Docker uses Go templates to manipulate the output format.
 For example, to get the IP of a running container:
 
 docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <CONTAINER_ID>
+
+-----------------
+
+Docker networks and attachable network
+
+[Networks] & attachable flag
+
+NONE: disable networking
+
+HOST: removes containers-host isolation
+
+BRIDGE: connects standalone containers
+
+MACVLAN: assign a MAC address to a container that appears as a physical device
+
+OVERLAY: connect multiple daemons, for swarm
+
+docker network create -d overlay --attachable overlay-network
