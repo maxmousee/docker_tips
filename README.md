@@ -35,3 +35,41 @@ and use it like this:
 ## Delete all not running containers
 
 docker container rm $(docker ps -a -q)
+
+-----------------
+
+## Prune what we no longer need ✂️
+
+### Remove dangling images
+
+docker image prune
+
+### Remove all images not used by existing containers
+
+docker image prune -a
+
+### Remove only images created in the last hour
+
+docker image prune -a --filter "until=1h"
+
+### Remove all stopped containers
+
+docker container prune
+
+### Remove all volumes not used by at least one container
+
+docker volume prune
+
+### Remove all networks not used by at least one container
+
+docker network prune
+
+### Docker system prune will remove
+### - all stopped containers
+### - all networks not used by at least one container
+### - all dangling images
+### - all build cache
+
+docker system prune
+
+### to bypass the prompt, use -f or --force
