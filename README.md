@@ -83,3 +83,15 @@ docker run <IMAGE_ID> env
 If you have problems, try also
 
 docker exec <CONTAINER_ID> env
+
+-----------------
+
+## Docker inspect GO template
+
+'docker inspect ' and other commands are useful but quite verbose. 
+
+Docker uses Go templates to manipulate the output format.
+
+For example, to get the IP of a running container:
+
+docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <CONTAINER_ID>
