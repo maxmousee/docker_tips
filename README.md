@@ -98,7 +98,7 @@ docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' <CO
 
 -----------------
 
-Docker networks and attachable network
+## Docker networks and attachable network
 
 [Networks] & attachable flag
 
@@ -113,3 +113,16 @@ MACVLAN: assign a MAC address to a container that appears as a physical device
 OVERLAY: connect multiple daemons, for swarm
 
 docker network create -d overlay --attachable overlay-network
+
+-----------------
+
+## Docker top - port - kill
+
+### 𝐝𝐨𝐜𝐤𝐞𝐫 𝐭𝐨𝐩:  Displays the container's running processes
+$ docker top <container>
+
+### 𝐝𝐨𝐜𝐤𝐞𝐫 𝐩𝐨𝐫𝐭: Lists container's port mappings
+$ docker port <container>
+
+### 𝐝𝐨𝐜𝐤𝐞𝐫 𝐤𝐢𝐥𝐥: Kills the process! (not ideal)
+$ docker kill <container>
