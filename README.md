@@ -11,7 +11,7 @@ RUN useradd --user-group --shell /bin/false newuser
 ## switch to newuser
 USER newuser
 
-# run next steps as new user
+## run next steps as new user
 #...
 
 -----------------
@@ -29,3 +29,9 @@ alias .pid="docker inspect -f '{{.State.Pid}}' $1"
 and use it like this:
 
 .pid 123
+
+-----------------
+
+## Delete all not running containers
+
+docker container rm $(docker ps -a -q)
