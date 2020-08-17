@@ -3,15 +3,15 @@
 ## Create a Non-Root User inside a Dockerfile
 
 
-## Dockerfile
+### Dockerfile
 #...
-## create a non-root user with restricted privileges
+### create a non-root user with restricted privileges
 RUN useradd --user-group --shell /bin/false newuser
 
-## switch to newuser
+### switch to newuser
 USER newuser
 
-## run next steps as new user
+### run next steps as new user
 #...
 
 -----------------
@@ -73,3 +73,13 @@ docker network prune
 docker system prune
 
 ### to bypass the prompt, use -f or --force
+
+-----------------
+
+## Check the environment variables of an image
+
+docker run <IMAGE_ID> env
+
+If you have problems, try also
+
+docker exec <CONTAINER_ID> env
