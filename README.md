@@ -319,3 +319,20 @@ open localhost:9000
 -u: user
 -v: volume
 -w: default workdir
+
+-----------------
+
+## Docker Login
+
+docker login <registry_ip>
+
+Log in to a Docker registry
+
+If registry_ip not specified, tries to login to Docker Hub
+
+-p: password
+--password-stdin: take password from stdin
+-u: username
+
+login using a file.txt
+$ cat ~/file.txt | docker login -u user1 --password-stdin
