@@ -456,3 +456,18 @@ BUSYBOX (The Swiss Army knife of Embedded Linux)
 With docker, you can get started with it by simply running:
 
 $ docker run -it --rm busybox
+
+-----------------
+
+## Docker Compose Override
+
+Multiple compose files:
+
+By default, Compose reads 2 files:
+- docker-compose.yml (base config)
+- docker-compose.override.yml file (to override config)
+
+If a service is defined in both files, configurations are merged, useful for development
+
+#### Docs
+https://docs.docker.com/compose/reference/overview/
