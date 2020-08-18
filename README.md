@@ -226,3 +226,13 @@ $ docker rmi -f jenkins/jenkins:lts
 Documentation:
 
 https://github.com/jenkinsci/docker
+
+-----------------
+
+## Docker PostgreSQL and PSQL
+
+In 2 commands, run a Postgres container and get into PSQL 
+
+$ docker run --name testpostgres -p 5432:5432 -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=testdb -d postgres:latest
+ 
+$ docker exec -it postgresql psql -d testdb -U admin
