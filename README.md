@@ -384,3 +384,17 @@ open localhost:5000
 #### Documentation
 
 https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html
+
+-----------------
+
+## Docker on Raspberry Pi
+
+To get started using docker on a Raspberry Pi:
+
+$ sudo apt-get update && sudo apt-get upgrade
+
+$ curl -fsSL https://get.docker.com -o http://get-docker.sh
+
+$ sudo sh http://get-docker.sh
+
+$ sudo usermod -aG docker [pi_user]
