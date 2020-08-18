@@ -236,3 +236,33 @@ In 2 commands, run a Postgres container and get into PSQL
 $ docker run --name testpostgres -p 5432:5432 -e POSTGRES_USER=admin -e POSTGRES_PASSWORD=admin -e POSTGRES_DB=testdb -d postgres:latest
  
 $ docker exec -it postgresql psql -d testdb -U admin
+
+-----------------
+
+## Docker Tag
+
+Command:
+docker tag <image> <new tag>
+
+Effect:
+Create a tag image that refers to the source image
+
+A tag must be: 
+- valid ASCII 
+- may contain letters, digits, underscores, periods, dashes. 
+- may not start with a period or a dash 
+- maximum of 128 characters.
+
+Example:
+
+pull busybox image from docker hub
+
+$ docker pull busybox
+
+tag busybox image with a different tag
+
+$ docker tag busybox testtag
+
+check the new tag
+
+$ docker image ls
