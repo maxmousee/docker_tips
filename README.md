@@ -471,3 +471,9 @@ If a service is defined in both files, configurations are merged, useful for dev
 
 #### Docs
 https://docs.docker.com/compose/reference/overview/
+
+-----------------
+
+## Learn Common Docker Scenarios 
+
+https://www.katacoda.com/courses/docker
