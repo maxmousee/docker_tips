@@ -350,3 +350,21 @@ docker run OPTIONS to limit access to memory:
 Format: integer followed by b,k,m,g (eg: "100m")
 
 $ docker run -d -p 80:80 --name nginx1 -m="100m" --memory-swap="200m" --kernel-memory="80m" nginx
+
+-----------------
+
+## Docker Redis
+
+Redis is an open source, in-memory data structure store, used as a db, cache and message broker
+
+To get started using Redis in a docker container:
+
+$ docker run --name redis1 -d redis
+
+$ docker exec -it redis1 sh
+
+$ redis-cli
+
+$ set name "natan"
+
+$ get name
