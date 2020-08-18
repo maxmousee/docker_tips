@@ -431,3 +431,18 @@ To get started:
 docker run -d -p 3000:3000 grafana/grafana
 
 open localhost:3000
+
+-----------------
+
+## Docker Stats
+
+docker stats [OPTIONS] [CONTAINER...]
+returns a live data stream for containers. 
+
+Custom command, using GO template, that shows additional info you can try.
+
+$ docker stats -a --format "table {{.ID}}\t{{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.MemPerc}}\t{{.BlockIO}}"
+
+#### Docs
+
+https://docs.docker.com/engine/reference/commandline/stats/#options
