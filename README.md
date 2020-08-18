@@ -398,3 +398,19 @@ $ curl -fsSL https://get.docker.com -o http://get-docker.sh
 $ sudo sh http://get-docker.sh
 
 $ sudo usermod -aG docker [pi_user]
+
+-----------------
+
+## Docker Compose up options
+
+useful during dev
+
+--build: Always re-build images
+
+-d: Run in background
+
+--force-recreate: Recreate containers even if no change in configuration/image
+
+--no-start: Create services. Don't start them
+
+-V: Recreate volumes, no data from previous ones
