@@ -336,3 +336,17 @@ If registry_ip not specified, tries to login to Docker Hub
 
 login using a file.txt
 $ cat ~/file.txt | docker login -u user1 --password-stdin
+
+-----------------
+
+## Docker Run Memory Options
+
+docker run OPTIONS to limit access to memory:
+
+-m: max amount of memory a container can use
+--memory-swap: max memory the container is allowed to swap to disk
+--kernel-memory: max kernel memory the container can use
+
+Format: integer followed by b,k,m,g (eg: "100m")
+
+$ docker run -d -p 80:80 --name nginx1 -m="100m" --memory-swap="200m" --kernel-memory="80m" nginx
