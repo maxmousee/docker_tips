@@ -126,3 +126,11 @@ $ docker port <container>
 
 ### 𝐝𝐨𝐜𝐤𝐞𝐫 𝐤𝐢𝐥𝐥: Kills the process! (not ideal)
 $ docker kill <container>
+
+-----------------
+
+## Docker image layers
+
+To check the image layers:
+
+$ 𝗱𝗼𝗰𝗸𝗲𝗿 𝗵𝗶𝘀𝘁𝗼𝗿𝘆 <𝗜𝗠𝗔𝗚𝗘_𝗜𝗗>
