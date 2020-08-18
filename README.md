@@ -174,3 +174,39 @@ docker ps -a --filter "ancestor=nginx"
 #### Format output using GO template with just name and image
 
 docker ps --format "table {{.Names}}\t{{.Image}}
+
+-----------------
+
+## Docker Commit
+
+Command:
+docker commit [OPTIONS] <container> <new_image>
+
+Result:
+Create a new image with the changes on container
+
+Options:
+-a: author
+-c: apply Dockerfile instructions
+-m: commit message 
+
+Note: No data in volumes inside the container will be saved!
+
+#### Launch a Debian container, named debian1 based on a Debian image
+
+$ docker run --name debian1 -it debian bin/bash
+
+#### Inside the container, update apt-get
+[from inside the container]: apt-get update
+
+#### Let's install nmap into this container
+[from inside the container]: apt-get install nmap
+
+#### Exit the container
+[from inside the container]: exit
+
+#### Commit the current container into a new image
+$ docker commit debian1 debiansaved
+
+#### If we start a new debian container based on the new image, we already have nmap installed
+$ docker run --name debianmod -it debiansaved bin/bash
