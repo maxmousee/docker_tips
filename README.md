@@ -291,7 +291,6 @@ Docker manages the creation, the name is given by the user
 ANONYMOUS VOLUMES: 
 Docker manages it. Having no name, referring to it can be difficult
 
-
 -----------------
 
 ## Docker Portainer
@@ -303,3 +302,20 @@ $ docker volume create p_data
 $ docker run -d -p 8000:8000 -p 9000:9000 --name=prt --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v p_data:/data portainer/portainer
 
 open localhost:9000
+
+-----------------
+
+## Docker Run Options
+
+-d: detached mode
+-e: set/override env variable
+-i: Keep STDIN open
+--name: assign name
+--network: define network
+-p: publish ports
+-P: publish all the ports to the host interfaces
+--rm: remove on exit
+-t: pseudo-tty
+-u: user
+-v: volume
+-w: default workdir
