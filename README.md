@@ -368,3 +368,19 @@ $ redis-cli
 $ set name "natan"
 
 $ get name
+
+-----------------
+
+## Docker PGADMIN
+
+You can launch a version of PGADMIN with docker:
+
+Easy way to start:
+
+docker run -p 5000:80 -e PGADMIN_DEFAULT_EMAIL=test@test.com -e PGADMIN_DEFAULT_PASSWORD=123456 -d dpage/pgadmin4
+
+open localhost:5000
+
+#### Documentation
+
+https://www.pgadmin.org/docs/pgadmin4/latest/container_deployment.html
