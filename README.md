@@ -414,3 +414,20 @@ useful during dev
 --no-start: Create services. Don't start them
 
 -V: Recreate volumes, no data from previous ones
+
+-----------------
+
+## Docker Grafana
+
+GRAFANA
+
+OSS visualization/analytics software
+
+It allows to query/visualize/alert on/explore metrics no matter where they are stored 
+
+You can install... Or simply launch it using docker!
+
+To get started:
+docker run -d -p 3000:3000 grafana/grafana
+
+open localhost:3000
