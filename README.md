@@ -266,3 +266,18 @@ $ docker tag busybox testtag
 check the new tag
 
 $ docker image ls
+
+-----------------
+
+## Docker Volumes
+
+Preferred mechanism for persisting data for Docker containers
+
+- Special directory for containers
+- Designed to persist data
+- No automatically deleted
+- No garbage-collected when no more referenced
+
+To display information:
+
+docker volume inspect <volume>
