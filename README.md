@@ -152,3 +152,25 @@ D: deleted file or directory
 Usage:
 
 $ docker diff <container_ID/container_name>
+
+-----------------
+
+## Docker PS options
+
+docker container ps [OPTIONS]
+(you can use the shortcut: "docker ps [OPTIONS]")
+
+-a: show all containers, even the stopped ones
+-q: only show IDS
+-l:  show the latest container
+-s: show the size
+-f: filter output
+--format: show using GO template (example below)
+
+#### Show all containers, even stopped ones, that has 'nginx' as ancestor
+
+docker ps -a --filter "ancestor=nginx"
+
+#### Format output using GO template with just name and image
+
+docker ps --format "table {{.Names}}\t{{.Image}}
