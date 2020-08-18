@@ -210,3 +210,19 @@ $ docker commit debian1 debiansaved
 
 #### If we start a new debian container based on the new image, we already have nmap installed
 $ docker run --name debianmod -it debiansaved bin/bash
+
+-----------------
+
+## Docker Jenkins Official Image
+
+JENKINS: free, open source automation server.
+
+You can just start using it using its official docker image"
+$ docker run -p 8080:8080 -p 50000:50000 jenkins/jenkins:lts
+
+To remove, just remove the container and the image:
+$ docker rmi -f jenkins/jenkins:lts
+
+Documentation:
+
+https://github.com/jenkinsci/docker
