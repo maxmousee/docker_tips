@@ -281,3 +281,25 @@ Preferred mechanism for persisting data for Docker containers
 To display information:
 
 docker volume inspect <volume>
+
+HOST VOLUMES: 
+It is on the Filesystem, and is accessible from the container
+
+NAMED VOLUMES: 
+Docker manages the creation, the name is given by the user
+
+ANONYMOUS VOLUMES: 
+Docker manages it. Having no name, referring to it can be difficult
+
+
+-----------------
+
+## Docker Portainer
+
+Simplify container management in Swarm and K8s
+
+$ docker volume create p_data
+
+$ docker run -d -p 8000:8000 -p 9000:9000 --name=prt --restart=always -v /var/run/docker.sock:/var/run/docker.sock -v p_data:/data portainer/portainer
+
+open localhost:9000
