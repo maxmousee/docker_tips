@@ -134,3 +134,21 @@ $ docker kill <container>
 To check the image layers:
 
 $ 𝗱𝗼𝗰𝗸𝗲𝗿 𝗵𝗶𝘀𝘁𝗼𝗿𝘆 <𝗜𝗠𝗔𝗚𝗘_𝗜𝗗>
+
+-----------------
+
+## Docker diff
+
+Handy command to check any changes to:
+-files
+-directories 
+
+on the container’s filesystem
+
+A: added file or directory
+C: changed file or directory was 
+D: deleted file or directory
+
+Usage:
+
+$ docker diff <container_ID/container_name>
